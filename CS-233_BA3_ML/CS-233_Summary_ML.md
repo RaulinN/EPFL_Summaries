@@ -72,9 +72,9 @@
 
 
 
-##2.	Data representation
+## 2.	Data representation
 
-###2.1	Bag of words : "Bow" (for text)
+### 2.1	Bag of words : "Bow" (for text)
 
 **Idea** : For each sample, count the numbers of times each word in the dictionary appears
 
@@ -117,7 +117,7 @@ This final representation is called an **histogram** (st. $x_1^{(d)} \in [0,1]$ 
 
 
 
-###2.2	Visual dictionary (for images)
+### 2.2	Visual dictionary (for images)
 
 **Idea** : extract patches from all images. Some patches look similar, we them cluster the patches based on similarity to obtain prototypes that act as a dictionary words. The center of each cluster is taken as a visual word
 
@@ -135,7 +135,7 @@ This final representation is called an **histogram** (st. $x_1^{(d)} \in [0,1]$ 
 
 ## 3.	Before the calculation
 
-###3.1	Data pre-processing
+### 3.1	Data pre-processing
 
 Even with a good representation, the data might benefit from being pre-processed, e.g.
 
@@ -151,7 +151,7 @@ Even with a good representation, the data might benefit from being pre-processed
 
 
 
-###3.2	Data normalisation
+### 3.2	Data normalisation
 
 Idea : Scale each attribute dimension to fall within a specified range (formulas can be found in the slides (lecture 2, page 37 and onwards)) //TODO FORMULAS
 
@@ -244,7 +244,7 @@ In the example below, $K=4$ and $D=2$
 
 
 
-####4.1.2	Algorithm ([example](http://stanford.edu/class/ee103/visualizations/kmeans/kmeans.html))
+#### 4.1.2	Algorithm ([example](http://stanford.edu/class/ee103/visualizations/kmeans/kmeans.html))
 
 1. Initialize $\{\mu_1, \dots, \mu_K\}$ (e.g., randomly)
 2. While not converged :
@@ -280,7 +280,7 @@ Example from (Bishop's book, Chap. 9.1)
 
 
 
-####4.1.4	Problems with K-means clustering
+#### 4.1.4	Problems with K-means clustering
 
 The Euclidean distance works well for data with homogeneous dimensions, let's see a counter example
 
@@ -315,7 +315,7 @@ $$
 
 
 
-####4.2.1	Preliminaries
+#### 4.2.1	Preliminaries
 
 **Classification vs Regression**
 
@@ -354,7 +354,7 @@ We denote the i<sup>th</sup> label (output) in the collection of $N$ samples as 
 
 
 
-####4.2.2	Algorithm
+#### 4.2.2	Algorithm
 
 1. Compute the distance between the test sample $x$ and **all** training samples $\{x_i\}$
 2. Find the sample $x_{NN}$ with minimum distance
@@ -366,9 +366,9 @@ We denote the i<sup>th</sup> label (output) in the collection of $N$ samples as 
 
 
 
-###4.3	k-Nearest neighbors
+### 4.3	k-Nearest neighbors
 
-####4.3.1	Algorithm [example](http://vision.stanford.edu/teaching/cs231n-demos/knn/)
+#### 4.3.1	Algorithm [example](http://vision.stanford.edu/teaching/cs231n-demos/knn/)
 
 *(L2 distance : Euclidian distance)*
 
@@ -405,7 +405,7 @@ $$
 
 
 
-####4.3.2	Examples
+#### 4.3.2	Examples
 
 - MNIST classification (input : hand-drawn number, output : what number it is)
 - Predict fuel consumption for cars given 8 attributes such as cylinders, horsepower, weight, ...
@@ -415,7 +415,7 @@ $$
 
 
 
-####4.3.3	Properties
+#### 4.3.3	Properties
 
 - Curse of dimensionality : in the real world, data representation ten to be high dimensional. In such dimensions, all points tend to be far apart (and the algorithm starts being unreliable)
 - Computationally expensive (need to compute the distance to all training samples for each test sample)
